@@ -1,0 +1,45 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ── PyInstaller 打包产物 ──
+build/
+dist/
+*.spec
+
+# ── IDE / 编辑器 ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── 操作系统 ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── 本项目运行时生成的输出 ──
+# 拆分后的 PDF
+*_彩色.pdf
+*_黑白.pdf
+# HTML 报告
+*_报告.html
+# 缩略图
+preview_p*.png
+# 冒烟测试脚本（开发期临时文件）
+_smoke_test.py
+
+# ── Claude Code 本地状态 ──
+.claude/
+
+# ── 大体积 / 版权敏感的样例 PDF（默认排除，需要时手动 -f 添加）──
+input.pdf
+*OCR*.pdf
