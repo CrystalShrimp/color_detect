@@ -15,8 +15,8 @@ import numpy as np
 COLOR_PRICE = 1.0
 BW_PRICE = 0.1
 
-# Windows 控制台中文输出
-if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+# Windows 控制台中文输出（GUI --windowed 模式下 sys.stdout 是 None，需防御）
+if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout.encoding.lower() != "utf-8":
     try:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
